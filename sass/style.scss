@@ -1,0 +1,71 @@
+@import "_variables";
+@import "_mixins";
+
+body {
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+}
+
+.nav-container {
+    ul {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        list-style: none;
+        li {
+            padding: 10px;
+            a {
+                color: $primary-text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.main-container{
+    .title {
+        @include center-element;
+    }
+
+    .items-container {
+        @include center-element;
+        margin-top: 50px;
+    }
+}
+
+
+.btn {
+    padding: 10px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    @extend .btn;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    @extend .btn;
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+}
+
+
+
+
+
+/*   
+
+Top-level statements
+
+1.- Imports 
+2.- Definicion de Mixins 
+3.- Definicion de Funciones
+4.- Definicion de Modulos
+5.- Definicion de Variables
+
+*/
